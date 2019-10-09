@@ -10,6 +10,10 @@ namespace Ejer3LinqPractice
     {
         static void Main(string[] args)
         {
+            string archivo = File.ReadAllText("Heroes.json");
+            List<Heroe> heroes = JsonConvert.DeserializeObject<List<Heroe>>(archivo);
+            Console.WriteLine(archivo);
         }
     }
 }
+
